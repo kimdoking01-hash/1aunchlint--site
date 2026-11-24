@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaunchLint — Privacy Policy</title>
+    <meta name="description" content="How the LaunchLint Chrome extension handles page data, license keys and settings." />
+    <style>
+      :root { --ink: #0f172a; --muted: #5b6478; --line: #e6e8f0; --soft: #f7f8fc; --accent: #4338ca; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+      a { color: var(--accent); }
+      .site-head { display: flex; align-items: center; gap: 14px; max-width: 980px; margin: 0 auto; padding: 18px 22px; }
+      .site-head .brand { display: flex; align-items: center; gap: 9px; font-weight: 700; text-decoration: none; color: var(--ink); }
+      .site-head .brand img { border-radius: 7px; }
+      .site-head nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+      .site-head nav a { color: var(--muted); text-decoration: none; }
+      .site-head nav a:hover, .site-head nav a[aria-current="page"] { color: var(--ink); }
+      .legal { max-width: 780px; margin: 0 auto; padding: 28px 22px 60px; }
+      .legal h1 { font-size: 30px; letter-spacing: -0.02em; margin: 10px 0 4px; }
+      .legal .updated { color: var(--muted); font-size: 13px; margin: 0 0 26px; }
+      .legal h2 { font-size: 18px; margin: 32px 0 8px; }
+      .legal p, .legal li { color: #273043; font-size: 15px; }
+      .legal ul { padding-left: 20px; }
+      .legal table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+      .legal th, .legal td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      .legal th { color: var(--muted); font-weight: 600; }
+      .legal code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+      .site-foot { border-top: 1px solid var(--line); padding: 26px 22px 46px; color: var(--muted); font-size: 13px; }
+      .site-foot p { max-width: 980px; margin: 0 auto; }
+    </style>
+  </head>
+  <body>
+    <header class="site-head">
+      <a class="brand" href="https://kimdoking01-hash.github.io/1aunchlint--site/">
+        <span>LaunchLint</span>
+      </a>
+      <nav>
+        <a href="https://kimdoking01-hash.github.io/1aunchlint--site/#features">Features</a>
+        <a href="https://kimdoking01-hash.github.io/1aunchlint--site/#pricing">Pricing</a>
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="legal">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 24 November 2026</p>
+
+      <p>
+        LaunchLint is a Chrome extension that audits the web page you are currently viewing and turns the result into
+        a report. This policy explains exactly what the extension reads, where it goes, and what it never does.
+      </p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>The page you scan is analysed <strong>inside your browser</strong>. Its content, screenshots and results are never uploaded to us.</li>
+        <li>There is no analytics, no advertising SDK, no tracking pixel and no account sign-in.</li>
+        <li>The only network request the extension makes is a license-key check with <strong>Polar</strong> (polar.sh) when you activate or re-check a paid license.</li>
+        <li>Scan results and settings are stored in your browser's own extension storage, on your device.</li>
+      </ul>
+
+      <h2>What the extension reads</h2>
+      <p>When you press <em>Scan this page</em>, LaunchLint reads the page that is open in the active tab:</p>
+      <ul>
+        <li>Page metadata: title, meta description, canonical URL, robots directives, language, viewport, social-preview tags.</li>
+        <li>Page structure: headings, links and their targets, images and alt text, form fields and their labels, duplicate ids.</li>
+        <li>Rendered text and computed colour values, used to check contrast.</li>
+        <li>Browser performance timings already available for that page load (time to first byte, load time, resource sizes, third-party origins, Largest Contentful Paint).</li>
+        <li>HTTP status codes for up to a handful of same-site links on that page, requested from your browser.</li>
+      </ul>
+      <p>
+        This reading happens only when you ask for a scan. LaunchLint does not run in the background, does not crawl
+        other pages, and does not read pages you have not scanned.
+      </p>
+
+      <h2>What leaves your device</h2>
+      <p>
+        Page content never leaves your device. The only outbound request is the license check described below, which
+        contains your license key, the product's organization id and a short device label.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Recipient</th><th>When</th><th>What is sent</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Polar Software Inc. (polar.sh), our merchant of record — <a href="https://polar.sh/legal/privacy" target="_blank" rel="noopener">their privacy policy</a></td>
+            <td>When you activate a license, when the extension re-checks it (at most once a day), or when you deactivate this device</td>
+            <td>License key, organization id, benefit id, device label, and the standard HTTP request metadata (IP address, user agent)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>We do not receive, store or process that payment or license information ourselves beyond what Polar's customer portal shows you.</p>
+
+      <h2>What is stored on your device</h2>
+      <ul>
+        <li><strong>Settings</strong>: your agency name, accent colour and display preference.</li>
+        <li><strong>License record</strong>: the key you entered, the activation id Polar returned, and when it was last checked.</li>
+        <li><strong>Scan history</strong>: the page URL, score and issue counts of your last few scans (no page content).</li>
+      </ul>
+      <p>
+        This data lives in Chrome's extension storage for this profile. You can clear the scan history from the
+        extension's settings page, and removing the extension deletes all of it.
+      </p>
+
+      <h2>Permissions and why they are needed</h2>
+      <table>
+        <thead>
+          <tr><th>Permission</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>activeTab</code></td><td>Read the one page you explicitly scan, only after you open the panel from that tab.</td></tr>
+          <tr><td><code>scripting</code></td><td>Inject the read-only collector into that tab for the length of the scan.</td></tr>
+          <tr><td><code>sidePanel</code></td><td>Show the report next to the page.</td></tr>
+          <tr><td><code>storage</code></td><td>Keep your settings, license record and score history locally.</td></tr>
+          <tr><td><code>api.polar.sh</code></td><td>Validate a paid license key. Nothing else is requested from that host.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Data we never collect</h2>
+      <ul>
+        <li>No browsing history, no list of open tabs, no keystrokes, no clipboard.</li>
+        <li>No page HTML, screenshots, form entries or passwords.</li>
+        <li>No advertising identifiers and no third-party analytics.</li>
+        <li>No sale or sharing of personal data, ever.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>LaunchLint is a tool for professional web work and is not directed at children under 13.</p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the updated version appears on this page with a new date, and material changes are
+        noted in the extension's release notes.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy: <a href="mailto:kimdoking01@gmail.com">kimdoking01@gmail.com</a>. LaunchLint is
+        published by KingSearch.
+      </p>
+    </main>
+
+    <footer class="site-foot">
+      <p>LaunchLint by KingSearch · <a href="https://kimdoking01-hash.github.io/1aunchlint--site/">Home</a> · <a href="./privacy.html">Privacy</a></p>
+    </footer>
+  </body>
+</html>

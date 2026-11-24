@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaunchLint — pre-launch QA for client websites</title>
+    <meta
+      name="description"
+      content="Scan any page before you hand it to a client. LaunchLint catches leftover placeholders, dead links, missing meta, contrast and speed problems, then writes a branded report."
+    />
+    <meta property="og:title" content="LaunchLint — pre-launch QA for client websites" />
+    <meta property="og:description" content="Score a page in one click, fix what would embarrass you at handoff, export a report with your own name on it." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="icon-128.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-head">
+      <a class="brand" href="./index.html">
+        <img src="icon-128.png" alt="" width="28" height="28" />
+        <span>LaunchLint</span>
+      </a>
+      <nav>
+        <a href="#features">What it catches</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="./privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <span class="kicker">Chrome extension · QA before handoff</span>
+        <h1>Ship the page, not the placeholder.</h1>
+        <p class="lead">
+          LaunchLint reads the page you are looking at and scores it the way a client will: leftover Lorem ipsum,
+          links that go nowhere, a missing title, grey-on-white text, a four-megabyte hero image. One click, thirty
+          seconds, a report you can send.
+        </p>
+        <div class="cta-row">
+          <a class="button" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Add to Chrome — free</a>
+          <a class="button secondary" href="#pricing">See pricing</a>
+          <span class="micro">No account. Nothing about your pages leaves the browser.</span>
+        </div>
+      </div>
+
+      <section id="features">
+        <div class="wrap">
+          <h2>What it catches before your client does</h2>
+          <p class="sub">
+            Forty-plus checks across seven areas. The order is deliberate: the things that embarrass a team first,
+            the technical polish last.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <span class="tag">Unfinished content</span>
+              <h3>Placeholders and dead ends</h3>
+              <p>Lorem ipsum, <code>{{tokens}}</code>, <code>undefined</code>, "coming soon", 555 phone numbers, <code>href="#"</code> buttons, staging links and a footer still dated a year ago.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Structure &amp; copy</span>
+              <h3>An outline a reader can follow</h3>
+              <p>Missing or duplicated H1, skipped heading levels, empty headings, thin copy, vague "read more" links and controls with no readable label.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Head, SEO &amp; sharing</span>
+              <h3>What search and Slack see</h3>
+              <p>Title and description length, a leftover <code>noindex</code>, canonical pointing at staging, missing lang, blocked pinch-zoom, absent Open Graph preview.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Images</span>
+              <h3>Every image accounted for</h3>
+              <p>Missing alt text, images that failed to load, oversized files, retina exports at four times the displayed size and missing width/height that makes the layout jump.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Links</span>
+              <h3>Links that actually answer</h3>
+              <p>A sample of same-site links is requested from your browser and reported with its status code, plus mixed content and <code>target="_blank"</code> without <code>noopener</code>.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Accessibility</span>
+              <h3>Contrast measured, not guessed</h3>
+              <p>Real computed colours sampled across the page, checked against WCAG 4.5:1 and 3:1, plus unlabelled fields, duplicate ids and positive tabindex.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="wrap">
+          <h2>Three steps, no setup</h2>
+          <p class="sub">Nothing to install on the site you are checking, no crawl to configure, no account to create before you see the score.</p>
+          <div class="steps">
+            <div class="step">
+              <h3>Open the page</h3>
+              <p>Staging, production, a page behind basic auth — if you can open it in Chrome, LaunchLint can read it.</p>
+            </div>
+            <div class="step">
+              <h3>Press Scan</h3>
+              <p>The panel scores the page, lists findings by severity and shows the fix for each one.</p>
+            </div>
+            <div class="step">
+              <h3>Send the report</h3>
+              <p>Export a print-ready HTML report or Markdown with your agency name and colour on it — or paste the top issues straight into a ticket.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>What a report looks like</h2>
+          <p class="sub">One number for the client, seven areas for the developer, and a fix line under every finding.</p>
+          <div class="report-mock">
+            <div class="score">72<small>/ 100</small></div>
+            <div class="bars">
+              <div class="bar-row"><span>Unfinished content</span><span class="bar"><span style="width:56%"></span></span></div>
+              <div class="bar-row"><span>Structure &amp; copy</span><span class="bar"><span style="width:82%"></span></span></div>
+              <div class="bar-row"><span>Head, SEO &amp; sharing</span><span class="bar"><span style="width:74%"></span></span></div>
+              <div class="bar-row"><span>Images &amp; media</span><span class="bar"><span style="width:88%"></span></span></div>
+              <div class="bar-row"><span>Accessibility</span><span class="bar"><span style="width:64%"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="wrap">
+          <h2>Simple pricing</h2>
+          <p class="sub">The scan is free forever. You pay when a report needs to leave your browser.</p>
+          <div class="pricing">
+            <article class="price-card">
+              <h3>Free</h3>
+              <p class="price">$0</p>
+              <ul>
+                <li>Full score and area breakdown</li>
+                <li>Top findings with fixes</li>
+                <li>4 same-site link checks per scan</li>
+                <li>2 scans of history</li>
+              </ul>
+              <a class="button secondary" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Add to Chrome</a>
+            </article>
+            <article class="price-card featured">
+              <h3>Lifetime</h3>
+              <p class="price">$29 <span>once</span></p>
+              <ul>
+                <li>Every finding, no cap</li>
+                <li>12 link checks per scan</li>
+                <li>Client-ready HTML report (print to PDF)</li>
+                <li>Markdown export and ticket copy</li>
+                <li>White-label header with your agency name</li>
+                <li>Updates for the life of the product</li>
+              </ul>
+              <a class="button" id="buy-lifetime" href="#pricing">Buy lifetime</a>
+            </article>
+            <article class="price-card">
+              <h3>Monthly</h3>
+              <p class="price">$9 <span>/ month</span></p>
+              <ul>
+                <li>Everything in Lifetime</li>
+                <li>Cancel any time</li>
+                <li>For busy months with lots of handoffs</li>
+              </ul>
+              <a class="button secondary" id="buy-monthly" href="#pricing">Subscribe</a>
+            </article>
+          </div>
+          <p class="micro">Prices in USD, taxes handled at checkout by Polar. One license covers your own devices.</p>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="wrap">
+          <h2>Questions</h2>
+          <details>
+            <summary>Does my page content get uploaded?</summary>
+            <p>No. The analysis runs inside the page's tab and the result stays in extension storage on your device. The only outbound call is the license check with Polar, which sends your key and a device label — never page data.</p>
+          </details>
+          <details>
+            <summary>Can it check a staging site behind a login?</summary>
+            <p>Yes, as long as you can open it in Chrome. LaunchLint audits the page you are signed in to, which is exactly the case hosted audit tools usually cannot handle.</p>
+          </details>
+          <details>
+            <summary>Is this another SEO audit tool?</summary>
+            <p>It overlaps on purpose — a page that cannot be indexed or read is a page that failed — but the point is the handoff. Placeholders, dead links, broken images and leftover noindex are the checks that stop a launch, and they come first here.</p>
+          </details>
+          <details>
+            <summary>What happens when the license server is down?</summary>
+            <p>A successful license check is honoured for seven days offline, so a network problem never locks you out of a tool that runs locally.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <p>LaunchLint by KingSearch · <a href="./privacy.html">Privacy policy</a> · <a href="mailto:kimdoking01@gmail.com">kimdoking01@gmail.com</a></p>
+    </footer>
+    <script>
+      // Checkout links are filled in from the Polar store once it exists.
+      const links = { lifetime: '', monthly: '' };
+      for (const [plan, url] of Object.entries(links)) {
+        const node = document.getElementById(`buy-${plan}`);
+        if (node && url) node.href = url;
+      }
+    </script>
+  </body>
+</html>
