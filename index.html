@@ -151,7 +151,7 @@
                 <li>White-label header with your agency name</li>
                 <li>Updates for the life of the product</li>
               </ul>
-              <a class="button" id="buy-lifetime" href="#pricing">Buy lifetime</a>
+              <a class="button" id="buy-lifetime" href="https://buy.polar.sh/polar_cl_JtZH7ogqs9XkS4Gg946CDhWG48Qo4FWJEb6TP0Q9VF5">Buy lifetime</a>
             </article>
             <article class="price-card">
               <h3>Monthly</h3>
@@ -161,7 +161,7 @@
                 <li>Cancel any time</li>
                 <li>For busy months with lots of handoffs</li>
               </ul>
-              <a class="button secondary" id="buy-monthly" href="#pricing">Subscribe</a>
+              <a class="button secondary" id="buy-monthly" href="https://buy.polar.sh/polar_cl_syyPDJYti7ToRDSUmLZfbSVehUBoMngRCiqTu1Zot1B">Subscribe</a>
             </article>
           </div>
           <p class="micro">Prices in USD, taxes handled at checkout by Polar. One license covers your own devices.</p>
@@ -196,7 +196,10 @@
     </footer>
     <script>
       // Checkout links are filled in from the Polar store once it exists.
-      const links = { lifetime: '', monthly: '' };
+      const links = {
+        lifetime: 'https://buy.polar.sh/polar_cl_JtZH7ogqs9XkS4Gg946CDhWG48Qo4FWJEb6TP0Q9VF5',
+        monthly: 'https://buy.polar.sh/polar_cl_syyPDJYti7ToRDSUmLZfbSVehUBoMngRCiqTu1Zot1B',
+      };
       for (const [plan, url] of Object.entries(links)) {
         const node = document.getElementById(`buy-${plan}`);
         if (node && url) node.href = url;
